@@ -28,9 +28,12 @@ public class WhenCreatingObjects {
         Cat felix = new Cat("Felix", "Tuna", 4);
         Cat spot= new Cat("Spot", "Salmon", 3);
 
-        felix.makesNoise();
+
         felix.feed("Tuna");
         spot.feed("Salmon");
+
+        felix.makesNoise();
+        spot.makesNoise();
 
         felix.groom();
     }
