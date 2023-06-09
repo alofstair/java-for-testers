@@ -26,10 +26,9 @@ public class WhenCreatingObjects {
 
     @Test
     public void creating_a_hamster() {
-        Hamster harry = new Hamster("Harry","hide and seek",1);
+        Hamster harry = new Hamster("Harry",1);
 
         Assert.assertEquals(harry.getName(), "Harry");
-        Assert.assertEquals(harry.getFavouriteGame(), "hide and seek");
         Assert.assertEquals(harry.getAge(),1);
 
     }
@@ -39,15 +38,32 @@ public class WhenCreatingObjects {
         Cat felix = new Cat("Felix", 4);
         Cat spot= new Cat("Spot", "Salmon", 3);
 
+        System.out.println("Felix goes " + felix.makesNoise());
+
 
         felix.feed("Tuna");
         spot.feed("Salmon");
 
         System.out.println("Felix's favourite food = " + usualFood());
 
-        felix.makesNoise();
         spot.makesNoise();
 
         felix.groom();
+    }
+
+    @Test
+    public void hamster_makes_noise() {
+        Hamster fluffy = new Hamster("fluffy", 2);
+
+        System.out.println("fluffy goes " + fluffy.makesNoise());
+    }
+
+    @Test
+    public void pets_make_noise() {
+        Pet felix = new Cat("Felix", 4);
+        Pet bubbles = new Hamster("Bubbles",  2);
+
+        System.out.println("Felix goes " + felix.makesNoise());
+        System.out.println("Bubbles goes " + bubbles.makesNoise());
     }
 }

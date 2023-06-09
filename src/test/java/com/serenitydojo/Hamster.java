@@ -6,9 +6,8 @@ public class Hamster extends Pet {
     private int age;
 
 
-    public Hamster(String name, String favouriteGame, int age) {
+    public Hamster(String name, int age) {
         super(name);
-        this.favouriteGame = favouriteGame;
         this.age = age;
     }
 
@@ -18,5 +17,10 @@ public class Hamster extends Pet {
 
     public int getAge() {
         return age;
+    }
+
+    @Override
+    public String makesNoise() {
+        return "Sqweak";
     }
 }
