@@ -1,5 +1,6 @@
 package com.serenitydojo;
 
+import org.junit.Assert;
 import org.junit.Test;
 import static com.serenitydojo.Cat.usualFood;
 
@@ -25,8 +26,12 @@ public class WhenCreatingObjects {
 
     @Test
     public void creating_a_hamster() {
-        String name = "Harry";
-        String favouriteGame = "hide and seek";
+        Hamster harry = new Hamster("Harry","hide and seek",1);
+
+        Assert.assertEquals(harry.getName(), "Harry");
+        Assert.assertEquals(harry.getFavouriteGame(), "hide and seek");
+        Assert.assertEquals(harry.getAge(),1);
+
     }
 
     @Test
